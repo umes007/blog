@@ -13,7 +13,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
 
-    redirect_to "/articles"
+    redirect_to articles_path
+    # redirect_to "/articles"
   end
 
   def new
@@ -37,7 +38,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find params[:id]
 
-    if @article.update(title: params[:title], body: params[:body])
+    if @article.update(title: params[:article][:title], body: params[:article][:body])
       redirect_to "/articles/#{@article.id}"
     else
       render :new, status: :unprocessable_entity

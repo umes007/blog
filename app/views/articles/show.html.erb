@@ -3,10 +3,12 @@
 
 <p><%= @article.body %></p>
 
-<a href="/articles">Back to articles </a>
+<%# <a href="/articles">Back to articles </a> %>
 <br>
+<%= link_to "Back to articles", articles_path %>
 <br>
-<a href="/articles/<%= @article.id %>/edit">Edit article </a>
+<%# <a href="/articles/<%= @article.id %1>/edit">Edit article </a> %>
+<%= link_to "Edit articles", edit_article_path(@article.id) %>
 <br>
 <br>
 <!--
