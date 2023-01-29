@@ -18,6 +18,10 @@
       <!--      <%#= link_to article.title, article_path(article.id)%> -->
 
       <%= link_to article.title,"/articles/#{article.id}" %>
+      <br>
+      Created at: <%= article.created_at %>
+      <hr>
+      <br>
     </li>
   <% end %>
 </ul>
