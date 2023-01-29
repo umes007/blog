@@ -25,6 +25,7 @@
 
 <h2>Comments</h2>
 <% @article.comments.each do |comment| %>
+  <hr>
   <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
@@ -34,8 +35,10 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+  <hr>
 <% end %>
 
+<hr>
 
 <h2>Add a comment:</h2>
 <%= form_with model: [ @article, @article.comments.new ] do |form| %>
@@ -52,5 +55,6 @@
   </p>
 <% end %>
 
+<hr>
 
 
