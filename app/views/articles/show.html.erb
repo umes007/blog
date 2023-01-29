@@ -4,3 +4,13 @@
 <p><%= @article.body %></p>
 
 <a href="/articles">Back to articles </a>
+<br>
+<br>
+<a href="/articles/<%= @article.id %>/edit">Edit article </a>
+<br>
+<br>
+<!--
+<%= link_to "Delete Article", "/articles/#{@article.id}", data: {turbo_method: :delete, turbo_confirm: "Sure?"} %>
+-->
+
+<%= button_to "Delete article",  "/articles/#{@article.id}", method: :delete %>
